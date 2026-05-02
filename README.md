@@ -13,6 +13,7 @@ This application demonstrates real-world backend development using JDBC, SQL que
 - Delete student by ID  
 - Search student by ID  
 - Export student data to CSV  
+- Import student data from CSV  
 - View top-performing students (sorted by marks)
 
 ---
@@ -32,8 +33,7 @@ This application demonstrates real-world backend development using JDBC, SQL que
 - SQL operations (INSERT, SELECT, UPDATE, DELETE)
 - PreparedStatement for secure queries
 - Input validation using Scanner
-- File handling (CSV export)
-
+- File handling (CSV import & export)
 ---
 
 ## 📂 Project Structure
@@ -79,8 +79,7 @@ java -cp ".:sqlite-jdbc-3.53.0.0.jar" Main
 ---
 
 ## 🔮 Future Improvements
-
-- Add CSV import (file → database)  
+ 
 - Build GUI using JavaFX or Swing  
 - Add authentication system (login/signup)  
 - Deploy as a desktop application  
