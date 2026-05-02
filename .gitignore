@@ -1,2 +1,4 @@
 *.class
 students.db
+*.jar
+*.csv

@@ -18,6 +18,8 @@ public class Main {
             System.out.println("4. Update Marks");
             System.out.println("5. Search Student");
             System.out.println("6. Exit");
+            System.out.println("7. Export to CSV");
+            System.out.println("8. View Top Students");
             System.out.print("Enter choice: ");
 
             int choice;
@@ -107,6 +109,10 @@ public class Main {
             } else if (choice == 6) {
                 System.out.println("Exiting...");
                 break;
+            } else if (choice == 7) {
+                service.exportToCSV();
+            } else if (choice == 8) {
+                service.viewTopStudents();
             }
         }
         sc.close();
