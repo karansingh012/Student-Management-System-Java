@@ -7,7 +7,7 @@ public class Main {
         if (conn != null) {
             System.out.println("Connected to database!");
         }
-        DatabaseConnection.createTable(); // 🔥 ADD THIS
+        DatabaseConnection.createTable(); 
         Scanner sc = new Scanner(System.in);
         StudentService service = new StudentService();
 
@@ -20,6 +20,7 @@ public class Main {
             System.out.println("6. Exit");
             System.out.println("7. Export to CSV");
             System.out.println("8. View Top Students");
+            System.out.println("9. Import from CSV");
             System.out.print("Enter choice: ");
 
             int choice;
@@ -55,9 +56,11 @@ public class Main {
                 sc.nextLine();
 
                 service.addStudent(new Student(id, name, marks));
+                System.out.println();
 
             } else if (choice == 2) {
                 service.viewStudents();
+                System.out.println();
 
             } else if (choice == 3) {
                 System.out.print("Enter id to delete: ");
@@ -72,6 +75,7 @@ public class Main {
                     }
                 }
                 service.deleteStudent(id);
+                System.out.println();
 
             } else if (choice == 4) {
                 System.out.print("Enter id to update: ");
@@ -91,6 +95,7 @@ public class Main {
                 sc.nextLine();
 
                 service.updateMarks(id, marks);
+                System.out.println();
 
             } else if (choice == 5) {
                 System.out.print("Enter id to search: ");
@@ -105,14 +110,20 @@ public class Main {
                     }
                 }
                 service.searchStudent(id);
+                System.out.println();
 
             } else if (choice == 6) {
                 System.out.println("Exiting...");
                 break;
             } else if (choice == 7) {
                 service.exportToCSV();
+                System.out.println();
             } else if (choice == 8) {
                 service.viewTopStudents();
+                System.out.println();
+            } else if (choice == 9) {
+                service.importFromCSV();
+                System.out.println();
             }
         }
         sc.close();
